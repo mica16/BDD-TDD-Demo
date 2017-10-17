@@ -14,6 +14,4 @@ public class InMemoryBookingRepository implements BookingRepository {
         return bookings;
     }
 
-
-
 }
