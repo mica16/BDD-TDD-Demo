@@ -2,7 +2,7 @@ $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.
 formatter.feature({
   "line": 1,
   "name": "Tout client - Réserver un VTC",
-  "description": "\nUn client veut réserver un VTC intra-muros de sorte à se déplacer d\u0027un point A à un point B.",
+  "description": "\nUn client veut réserver un VTC de sorte à se déplacer d\u0027un point A à un point B.",
   "id": "tout-client---réserver-un-vtc",
   "keyword": "Feature"
 });
@@ -213,14 +213,14 @@ formatter.match({
   "location": "CustomerSteps.java:14"
 });
 formatter.result({
-  "duration": 82844122,
+  "duration": 98670554,
   "status": "passed"
 });
 formatter.match({
   "location": "VTCSteps.java:14"
 });
 formatter.result({
-  "duration": 406580,
+  "duration": 563493,
   "status": "passed"
 });
 formatter.scenario({
@@ -282,7 +282,7 @@ formatter.match({
   "location": "UserSteps.java:18"
 });
 formatter.result({
-  "duration": 7544548,
+  "duration": 8028227,
   "status": "passed"
 });
 formatter.match({
@@ -299,7 +299,7 @@ formatter.match({
   "location": "CustomerAccountSteps.java:17"
 });
 formatter.result({
-  "duration": 891283,
+  "duration": 944351,
   "status": "passed"
 });
 formatter.match({
@@ -317,19 +317,18 @@ formatter.match({
       "offset": 72
     }
   ],
-  "location": "BookingSteps.java:26"
+  "location": "BookingSteps.java:28"
 });
 formatter.result({
-  "duration": 1404375,
+  "duration": 2308966,
   "status": "passed"
 });
 formatter.match({
-  "location": "BookingSteps.java:37"
+  "location": "BookingSteps.java:39"
 });
 formatter.result({
-  "duration": 388962,
-  "error_message": "java.lang.AssertionError: expected:\u003c1\u003e but was:\u003c0\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat acceptance.BookingSteps.lambda$new$3(BookingSteps.java:39)\n\tat ✽.Then la réservation est effective(any-member_bookavtc.feature:20)\n",
-  "status": "failed"
+  "duration": 89964,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -345,7 +344,8 @@ formatter.match({
   "location": "CustomerAccountSteps.java:17"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 82508,
+  "status": "passed"
 });
 formatter.background({
   "line": 5,
@@ -428,14 +428,14 @@ formatter.match({
   "location": "CustomerSteps.java:14"
 });
 formatter.result({
-  "duration": 96605,
+  "duration": 117303,
   "status": "passed"
 });
 formatter.match({
   "location": "VTCSteps.java:14"
 });
 formatter.result({
-  "duration": 78377,
+  "duration": 84877,
   "status": "passed"
 });
 formatter.scenario({
@@ -497,7 +497,7 @@ formatter.match({
   "location": "UserSteps.java:18"
 });
 formatter.result({
-  "duration": 125252,
+  "duration": 117043,
   "status": "passed"
 });
 formatter.match({
@@ -514,7 +514,7 @@ formatter.match({
   "location": "CustomerAccountSteps.java:17"
 });
 formatter.result({
-  "duration": 179083,
+  "duration": 132372,
   "status": "passed"
 });
 formatter.match({
@@ -532,18 +532,18 @@ formatter.match({
       "offset": 69
     }
   ],
-  "location": "BookingSteps.java:26"
+  "location": "BookingSteps.java:28"
 });
 formatter.result({
-  "duration": 105365,
+  "duration": 289308,
   "status": "passed"
 });
 formatter.match({
-  "location": "BookingSteps.java:37"
+  "location": "BookingSteps.java:39"
 });
 formatter.result({
-  "duration": 319240,
-  "error_message": "java.lang.AssertionError: expected:\u003c1\u003e but was:\u003c0\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat acceptance.BookingSteps.lambda$new$3(BookingSteps.java:39)\n\tat ✽.Then la réservation est effective(any-member_bookavtc.feature:20)\n",
+  "duration": 509086,
+  "error_message": "java.lang.AssertionError: expected:\u003cBooking{customer\u003dCustomer{id\u003d\u0027ghi\u0027, firstName\u003d\u0027Patrick\u0027, lastName\u003d\u0027THOMAS\u0027}, vtc\u003dVTC{id\u003d\u0027abc\u0027, firstName\u003d\u0027Marc\u0027, lastName\u003d\u0027DUPUIS\u0027}, startPoint\u003d\u00275 rue Clisson 75013 Paris\u0027, destinationPoint\u003d\u002721 rue Laffitte 75009 Paris\u0027}\u003e but was:\u003cBooking{customer\u003dCustomer{id\u003d\u0027def\u0027, firstName\u003d\u0027Jean-Michel\u0027, lastName\u003d\u0027DUPONT\u0027}, vtc\u003dVTC{id\u003d\u0027abc\u0027, firstName\u003d\u0027Marc\u0027, lastName\u003d\u0027DUPUIS\u0027}, startPoint\u003d\u00275 rue Clisson 75013 Paris\u0027, destinationPoint\u003d\u002721 rue Laffitte 75009 Paris\u0027}\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat acceptance.BookingSteps.lambda$new$3(BookingSteps.java:42)\n\tat ✽.Then la réservation est effective(any-member_bookavtc.feature:20)\n",
   "status": "failed"
 });
 formatter.match({
@@ -643,14 +643,14 @@ formatter.match({
   "location": "CustomerSteps.java:14"
 });
 formatter.result({
-  "duration": 112001,
+  "duration": 126031,
   "status": "passed"
 });
 formatter.match({
   "location": "VTCSteps.java:14"
 });
 formatter.result({
-  "duration": 58501,
+  "duration": 99126,
   "status": "passed"
 });
 formatter.scenario({
@@ -712,7 +712,7 @@ formatter.match({
   "location": "UserSteps.java:18"
 });
 formatter.result({
-  "duration": 89835,
+  "duration": 436327,
   "status": "passed"
 });
 formatter.match({
@@ -729,7 +729,7 @@ formatter.match({
   "location": "CustomerAccountSteps.java:17"
 });
 formatter.result({
-  "duration": 144504,
+  "duration": 452961,
   "status": "passed"
 });
 formatter.match({
@@ -747,18 +747,18 @@ formatter.match({
       "offset": 80
     }
   ],
-  "location": "BookingSteps.java:26"
+  "location": "BookingSteps.java:28"
 });
 formatter.result({
-  "duration": 99389,
+  "duration": 155689,
   "status": "passed"
 });
 formatter.match({
-  "location": "BookingSteps.java:37"
+  "location": "BookingSteps.java:39"
 });
 formatter.result({
-  "duration": 203538,
-  "error_message": "java.lang.AssertionError: expected:\u003c1\u003e but was:\u003c0\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat acceptance.BookingSteps.lambda$new$3(BookingSteps.java:39)\n\tat ✽.Then la réservation est effective(any-member_bookavtc.feature:20)\n",
+  "duration": 320293,
+  "error_message": "java.lang.AssertionError: expected:\u003cBooking{customer\u003dCustomer{id\u003d\u0027abc\u0027, firstName\u003d\u0027Michael\u0027, lastName\u003d\u0027AZERHAD\u0027}, vtc\u003dVTC{id\u003d\u0027def\u0027, firstName\u003d\u0027Vincent\u0027, lastName\u003d\u0027RONNI\u0027}, startPoint\u003d\u0027136 avenue de Flandre 75019 Paris\u0027, destinationPoint\u003d\u00272 Avenue de Flandre 75019 Paris\u0027}\u003e but was:\u003cBooking{customer\u003dCustomer{id\u003d\u0027def\u0027, firstName\u003d\u0027Jean-Michel\u0027, lastName\u003d\u0027DUPONT\u0027}, vtc\u003dVTC{id\u003d\u0027def\u0027, firstName\u003d\u0027Vincent\u0027, lastName\u003d\u0027RONNI\u0027}, startPoint\u003d\u0027136 avenue de Flandre 75019 Paris\u0027, destinationPoint\u003d\u00272 Avenue de Flandre 75019 Paris\u0027}\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat acceptance.BookingSteps.lambda$new$3(BookingSteps.java:42)\n\tat ✽.Then la réservation est effective(any-member_bookavtc.feature:20)\n",
   "status": "failed"
 });
 formatter.match({
@@ -858,14 +858,14 @@ formatter.match({
   "location": "CustomerSteps.java:14"
 });
 formatter.result({
-  "duration": 85386,
+  "duration": 104302,
   "status": "passed"
 });
 formatter.match({
   "location": "VTCSteps.java:14"
 });
 formatter.result({
-  "duration": 67727,
+  "duration": 82484,
   "status": "passed"
 });
 formatter.scenario({
@@ -927,7 +927,7 @@ formatter.match({
   "location": "UserSteps.java:18"
 });
 formatter.result({
-  "duration": 119604,
+  "duration": 71625,
   "status": "passed"
 });
 formatter.match({
@@ -944,7 +944,7 @@ formatter.match({
   "location": "CustomerAccountSteps.java:17"
 });
 formatter.result({
-  "duration": 83121,
+  "duration": 61674,
   "status": "passed"
 });
 formatter.match({
@@ -962,18 +962,18 @@ formatter.match({
       "offset": 78
     }
   ],
-  "location": "BookingSteps.java:26"
+  "location": "BookingSteps.java:28"
 });
 formatter.result({
-  "duration": 81864,
+  "duration": 98660,
   "status": "passed"
 });
 formatter.match({
-  "location": "BookingSteps.java:37"
+  "location": "BookingSteps.java:39"
 });
 formatter.result({
-  "duration": 202610,
-  "error_message": "java.lang.AssertionError: expected:\u003c1\u003e but was:\u003c0\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat acceptance.BookingSteps.lambda$new$3(BookingSteps.java:39)\n\tat ✽.Then la réservation est effective(any-member_bookavtc.feature:20)\n",
+  "duration": 167877,
+  "error_message": "java.lang.AssertionError: expected:\u003cBooking{customer\u003dCustomer{id\u003d\u0027abc\u0027, firstName\u003d\u0027Michael\u0027, lastName\u003d\u0027AZERHAD\u0027}, vtc\u003dVTC{id\u003d\u0027def\u0027, firstName\u003d\u0027Vincent\u0027, lastName\u003d\u0027RONNI\u0027}, startPoint\u003d\u00272 Avenue de Flandre 75019 Paris\u0027, destinationPoint\u003d\u0027111 avenue Victor Hugo, 93300 Aubervilliers\u0027}\u003e but was:\u003cBooking{customer\u003dCustomer{id\u003d\u0027def\u0027, firstName\u003d\u0027Jean-Michel\u0027, lastName\u003d\u0027DUPONT\u0027}, vtc\u003dVTC{id\u003d\u0027def\u0027, firstName\u003d\u0027Vincent\u0027, lastName\u003d\u0027RONNI\u0027}, startPoint\u003d\u00272 Avenue de Flandre 75019 Paris\u0027, destinationPoint\u003d\u0027111 avenue Victor Hugo, 93300 Aubervilliers\u0027}\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat acceptance.BookingSteps.lambda$new$3(BookingSteps.java:42)\n\tat ✽.Then la réservation est effective(any-member_bookavtc.feature:20)\n",
   "status": "failed"
 });
 formatter.match({
@@ -1073,14 +1073,14 @@ formatter.match({
   "location": "CustomerSteps.java:14"
 });
 formatter.result({
-  "duration": 93397,
+  "duration": 134310,
   "status": "passed"
 });
 formatter.match({
   "location": "VTCSteps.java:14"
 });
 formatter.result({
-  "duration": 77054,
+  "duration": 177107,
   "status": "passed"
 });
 formatter.scenario({
@@ -1142,7 +1142,7 @@ formatter.match({
   "location": "UserSteps.java:18"
 });
 formatter.result({
-  "duration": 84444,
+  "duration": 90272,
   "status": "passed"
 });
 formatter.match({
@@ -1159,7 +1159,7 @@ formatter.match({
   "location": "CustomerAccountSteps.java:17"
 });
 formatter.result({
-  "duration": 125577,
+  "duration": 59190,
   "status": "passed"
 });
 formatter.match({
@@ -1177,18 +1177,18 @@ formatter.match({
       "offset": 90
     }
   ],
-  "location": "BookingSteps.java:26"
+  "location": "BookingSteps.java:28"
 });
 formatter.result({
-  "duration": 98903,
+  "duration": 169353,
   "status": "passed"
 });
 formatter.match({
-  "location": "BookingSteps.java:37"
+  "location": "BookingSteps.java:39"
 });
 formatter.result({
-  "duration": 240006,
-  "error_message": "java.lang.AssertionError: expected:\u003c1\u003e but was:\u003c0\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:645)\n\tat org.junit.Assert.assertEquals(Assert.java:631)\n\tat acceptance.BookingSteps.lambda$new$3(BookingSteps.java:39)\n\tat ✽.Then la réservation est effective(any-member_bookavtc.feature:20)\n",
+  "duration": 168363,
+  "error_message": "java.lang.AssertionError: expected:\u003cBooking{customer\u003dCustomer{id\u003d\u0027abc\u0027, firstName\u003d\u0027Michael\u0027, lastName\u003d\u0027AZERHAD\u0027}, vtc\u003dVTC{id\u003d\u0027def\u0027, firstName\u003d\u0027Vincent\u0027, lastName\u003d\u0027RONNI\u0027}, startPoint\u003d\u0027111 avenue Victor Hugo, 93300 Aubervilliers\u0027, destinationPoint\u003d\u00272 Avenue de Flandre 75019 Paris\u0027}\u003e but was:\u003cBooking{customer\u003dCustomer{id\u003d\u0027def\u0027, firstName\u003d\u0027Jean-Michel\u0027, lastName\u003d\u0027DUPONT\u0027}, vtc\u003dVTC{id\u003d\u0027def\u0027, firstName\u003d\u0027Vincent\u0027, lastName\u003d\u0027RONNI\u0027}, startPoint\u003d\u0027111 avenue Victor Hugo, 93300 Aubervilliers\u0027, destinationPoint\u003d\u00272 Avenue de Flandre 75019 Paris\u0027}\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat acceptance.BookingSteps.lambda$new$3(BookingSteps.java:42)\n\tat ✽.Then la réservation est effective(any-member_bookavtc.feature:20)\n",
   "status": "failed"
 });
 formatter.match({
@@ -1419,14 +1419,14 @@ formatter.match({
   "location": "CustomerSteps.java:14"
 });
 formatter.result({
-  "duration": 118320,
+  "duration": 124935,
   "status": "passed"
 });
 formatter.match({
   "location": "VTCSteps.java:14"
 });
 formatter.result({
-  "duration": 65303,
+  "duration": 73096,
   "status": "passed"
 });
 formatter.scenario({
@@ -1493,7 +1493,7 @@ formatter.match({
   "location": "UserSteps.java:18"
 });
 formatter.result({
-  "duration": 72571,
+  "duration": 127855,
   "status": "passed"
 });
 formatter.match({
@@ -1510,7 +1510,7 @@ formatter.match({
   "location": "CustomerAccountSteps.java:17"
 });
 formatter.result({
-  "duration": 59522,
+  "duration": 65185,
   "status": "passed"
 });
 formatter.match({
@@ -1528,22 +1528,22 @@ formatter.match({
       "offset": 72
     }
   ],
-  "location": "BookingSteps.java:26"
+  "location": "BookingSteps.java:28"
 });
 formatter.result({
-  "duration": 66046,
+  "duration": 91118,
   "status": "passed"
 });
 formatter.match({
-  "location": "BookingSteps.java:44"
+  "location": "BookingSteps.java:46"
 });
 formatter.result({
-  "duration": 1347782,
-  "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat acceptance.BookingSteps.lambda$new$4(BookingSteps.java:45)\n\tat ✽.Then la réservation n\u0027est pas effective(any-member_bookavtc.feature:34)\n",
+  "duration": 1038334,
+  "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat acceptance.BookingSteps.lambda$new$4(BookingSteps.java:47)\n\tat ✽.Then la réservation n\u0027est pas effective(any-member_bookavtc.feature:34)\n",
   "status": "pending"
 });
 formatter.match({
-  "location": "BookingSteps.java:47"
+  "location": "BookingSteps.java:49"
 });
 formatter.result({
   "status": "skipped"
@@ -1645,14 +1645,14 @@ formatter.match({
   "location": "CustomerSteps.java:14"
 });
 formatter.result({
-  "duration": 83930,
+  "duration": 86004,
   "status": "passed"
 });
 formatter.match({
   "location": "VTCSteps.java:14"
 });
 formatter.result({
-  "duration": 46163,
+  "duration": 83837,
   "status": "passed"
 });
 formatter.scenario({
@@ -1719,7 +1719,7 @@ formatter.match({
   "location": "UserSteps.java:18"
 });
 formatter.result({
-  "duration": 52182,
+  "duration": 87310,
   "status": "passed"
 });
 formatter.match({
@@ -1736,7 +1736,7 @@ formatter.match({
   "location": "CustomerAccountSteps.java:17"
 });
 formatter.result({
-  "duration": 61077,
+  "duration": 55639,
   "status": "passed"
 });
 formatter.match({
@@ -1754,22 +1754,22 @@ formatter.match({
       "offset": 69
     }
   ],
-  "location": "BookingSteps.java:26"
+  "location": "BookingSteps.java:28"
 });
 formatter.result({
-  "duration": 53782,
+  "duration": 148301,
   "status": "passed"
 });
 formatter.match({
-  "location": "BookingSteps.java:44"
+  "location": "BookingSteps.java:46"
 });
 formatter.result({
-  "duration": 178935,
-  "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat acceptance.BookingSteps.lambda$new$4(BookingSteps.java:45)\n\tat ✽.Then la réservation n\u0027est pas effective(any-member_bookavtc.feature:34)\n",
+  "duration": 147436,
+  "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat acceptance.BookingSteps.lambda$new$4(BookingSteps.java:47)\n\tat ✽.Then la réservation n\u0027est pas effective(any-member_bookavtc.feature:34)\n",
   "status": "pending"
 });
 formatter.match({
-  "location": "BookingSteps.java:47"
+  "location": "BookingSteps.java:49"
 });
 formatter.result({
   "status": "skipped"
@@ -1871,14 +1871,14 @@ formatter.match({
   "location": "CustomerSteps.java:14"
 });
 formatter.result({
-  "duration": 84835,
+  "duration": 108453,
   "status": "passed"
 });
 formatter.match({
   "location": "VTCSteps.java:14"
 });
 formatter.result({
-  "duration": 66013,
+  "duration": 59113,
   "status": "passed"
 });
 formatter.scenario({
@@ -1945,7 +1945,7 @@ formatter.match({
   "location": "UserSteps.java:18"
 });
 formatter.result({
-  "duration": 86010,
+  "duration": 81964,
   "status": "passed"
 });
 formatter.match({
@@ -1962,7 +1962,7 @@ formatter.match({
   "location": "CustomerAccountSteps.java:17"
 });
 formatter.result({
-  "duration": 63300,
+  "duration": 153714,
   "status": "passed"
 });
 formatter.match({
@@ -1980,22 +1980,22 @@ formatter.match({
       "offset": 80
     }
   ],
-  "location": "BookingSteps.java:26"
+  "location": "BookingSteps.java:28"
 });
 formatter.result({
-  "duration": 69732,
+  "duration": 262921,
   "status": "passed"
 });
 formatter.match({
-  "location": "BookingSteps.java:44"
+  "location": "BookingSteps.java:46"
 });
 formatter.result({
-  "duration": 236003,
-  "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat acceptance.BookingSteps.lambda$new$4(BookingSteps.java:45)\n\tat ✽.Then la réservation n\u0027est pas effective(any-member_bookavtc.feature:34)\n",
+  "duration": 346779,
+  "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat acceptance.BookingSteps.lambda$new$4(BookingSteps.java:47)\n\tat ✽.Then la réservation n\u0027est pas effective(any-member_bookavtc.feature:34)\n",
   "status": "pending"
 });
 formatter.match({
-  "location": "BookingSteps.java:47"
+  "location": "BookingSteps.java:49"
 });
 formatter.result({
   "status": "skipped"
@@ -2097,14 +2097,14 @@ formatter.match({
   "location": "CustomerSteps.java:14"
 });
 formatter.result({
-  "duration": 118802,
+  "duration": 67971,
   "status": "passed"
 });
 formatter.match({
   "location": "VTCSteps.java:14"
 });
 formatter.result({
-  "duration": 60532,
+  "duration": 42715,
   "status": "passed"
 });
 formatter.scenario({
@@ -2171,7 +2171,7 @@ formatter.match({
   "location": "UserSteps.java:18"
 });
 formatter.result({
-  "duration": 78802,
+  "duration": 104553,
   "status": "passed"
 });
 formatter.match({
@@ -2188,7 +2188,7 @@ formatter.match({
   "location": "CustomerAccountSteps.java:17"
 });
 formatter.result({
-  "duration": 76726,
+  "duration": 85589,
   "status": "passed"
 });
 formatter.match({
@@ -2206,22 +2206,22 @@ formatter.match({
       "offset": 80
     }
   ],
-  "location": "BookingSteps.java:26"
+  "location": "BookingSteps.java:28"
 });
 formatter.result({
-  "duration": 60712,
+  "duration": 189265,
   "status": "passed"
 });
 formatter.match({
-  "location": "BookingSteps.java:44"
+  "location": "BookingSteps.java:46"
 });
 formatter.result({
-  "duration": 161360,
-  "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat acceptance.BookingSteps.lambda$new$4(BookingSteps.java:45)\n\tat ✽.Then la réservation n\u0027est pas effective(any-member_bookavtc.feature:34)\n",
+  "duration": 168561,
+  "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat acceptance.BookingSteps.lambda$new$4(BookingSteps.java:47)\n\tat ✽.Then la réservation n\u0027est pas effective(any-member_bookavtc.feature:34)\n",
   "status": "pending"
 });
 formatter.match({
-  "location": "BookingSteps.java:47"
+  "location": "BookingSteps.java:49"
 });
 formatter.result({
   "status": "skipped"
@@ -2323,14 +2323,14 @@ formatter.match({
   "location": "CustomerSteps.java:14"
 });
 formatter.result({
-  "duration": 98640,
+  "duration": 117647,
   "status": "passed"
 });
 formatter.match({
   "location": "VTCSteps.java:14"
 });
 formatter.result({
-  "duration": 63377,
+  "duration": 61027,
   "status": "passed"
 });
 formatter.scenario({
@@ -2397,7 +2397,7 @@ formatter.match({
   "location": "UserSteps.java:18"
 });
 formatter.result({
-  "duration": 77584,
+  "duration": 120639,
   "status": "passed"
 });
 formatter.match({
@@ -2414,7 +2414,7 @@ formatter.match({
   "location": "CustomerAccountSteps.java:17"
 });
 formatter.result({
-  "duration": 61080,
+  "duration": 86855,
   "status": "passed"
 });
 formatter.match({
@@ -2432,22 +2432,22 @@ formatter.match({
       "offset": 78
     }
   ],
-  "location": "BookingSteps.java:26"
+  "location": "BookingSteps.java:28"
 });
 formatter.result({
-  "duration": 87771,
+  "duration": 140028,
   "status": "passed"
 });
 formatter.match({
-  "location": "BookingSteps.java:44"
+  "location": "BookingSteps.java:46"
 });
 formatter.result({
-  "duration": 195577,
-  "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat acceptance.BookingSteps.lambda$new$4(BookingSteps.java:45)\n\tat ✽.Then la réservation n\u0027est pas effective(any-member_bookavtc.feature:34)\n",
+  "duration": 222170,
+  "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat acceptance.BookingSteps.lambda$new$4(BookingSteps.java:47)\n\tat ✽.Then la réservation n\u0027est pas effective(any-member_bookavtc.feature:34)\n",
   "status": "pending"
 });
 formatter.match({
-  "location": "BookingSteps.java:47"
+  "location": "BookingSteps.java:49"
 });
 formatter.result({
   "status": "skipped"
@@ -2622,14 +2622,14 @@ formatter.match({
   "location": "CustomerSteps.java:14"
 });
 formatter.result({
-  "duration": 259301,
+  "duration": 181419,
   "status": "passed"
 });
 formatter.match({
   "location": "VTCSteps.java:14"
 });
 formatter.result({
-  "duration": 205016,
+  "duration": 110503,
   "status": "passed"
 });
 formatter.scenario({
@@ -2669,7 +2669,7 @@ formatter.match({
   "location": "UserSteps.java:25"
 });
 formatter.result({
-  "duration": 243536,
+  "duration": 243768,
   "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat acceptance.UserSteps.lambda$new$2(UserSteps.java:27)\n\tat ✽.Given je ne suis pas authentifié(any-member_bookavtc.feature:47)\n",
   "status": "pending"
 });
@@ -2688,19 +2688,19 @@ formatter.match({
       "offset": 72
     }
   ],
-  "location": "BookingSteps.java:26"
+  "location": "BookingSteps.java:28"
 });
 formatter.result({
   "status": "skipped"
 });
 formatter.match({
-  "location": "BookingSteps.java:44"
+  "location": "BookingSteps.java:46"
 });
 formatter.result({
   "status": "skipped"
 });
 formatter.match({
-  "location": "BookingSteps.java:50"
+  "location": "BookingSteps.java:52"
 });
 formatter.result({
   "status": "skipped"
@@ -2786,14 +2786,14 @@ formatter.match({
   "location": "CustomerSteps.java:14"
 });
 formatter.result({
-  "duration": 81699,
+  "duration": 152017,
   "status": "passed"
 });
 formatter.match({
   "location": "VTCSteps.java:14"
 });
 formatter.result({
-  "duration": 63004,
+  "duration": 156327,
   "status": "passed"
 });
 formatter.scenario({
@@ -2833,7 +2833,7 @@ formatter.match({
   "location": "UserSteps.java:25"
 });
 formatter.result({
-  "duration": 195291,
+  "duration": 258503,
   "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat acceptance.UserSteps.lambda$new$2(UserSteps.java:27)\n\tat ✽.Given je ne suis pas authentifié(any-member_bookavtc.feature:47)\n",
   "status": "pending"
 });
@@ -2852,19 +2852,19 @@ formatter.match({
       "offset": 69
     }
   ],
-  "location": "BookingSteps.java:26"
+  "location": "BookingSteps.java:28"
 });
 formatter.result({
   "status": "skipped"
 });
 formatter.match({
-  "location": "BookingSteps.java:44"
+  "location": "BookingSteps.java:46"
 });
 formatter.result({
   "status": "skipped"
 });
 formatter.match({
-  "location": "BookingSteps.java:50"
+  "location": "BookingSteps.java:52"
 });
 formatter.result({
   "status": "skipped"
@@ -2950,14 +2950,14 @@ formatter.match({
   "location": "CustomerSteps.java:14"
 });
 formatter.result({
-  "duration": 89563,
+  "duration": 94683,
   "status": "passed"
 });
 formatter.match({
   "location": "VTCSteps.java:14"
 });
 formatter.result({
-  "duration": 54047,
+  "duration": 60351,
   "status": "passed"
 });
 formatter.scenario({
@@ -2997,7 +2997,7 @@ formatter.match({
   "location": "UserSteps.java:25"
 });
 formatter.result({
-  "duration": 127383,
+  "duration": 151233,
   "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat acceptance.UserSteps.lambda$new$2(UserSteps.java:27)\n\tat ✽.Given je ne suis pas authentifié(any-member_bookavtc.feature:47)\n",
   "status": "pending"
 });
@@ -3016,19 +3016,19 @@ formatter.match({
       "offset": 80
     }
   ],
-  "location": "BookingSteps.java:26"
+  "location": "BookingSteps.java:28"
 });
 formatter.result({
   "status": "skipped"
 });
 formatter.match({
-  "location": "BookingSteps.java:44"
+  "location": "BookingSteps.java:46"
 });
 formatter.result({
   "status": "skipped"
 });
 formatter.match({
-  "location": "BookingSteps.java:50"
+  "location": "BookingSteps.java:52"
 });
 formatter.result({
   "status": "skipped"

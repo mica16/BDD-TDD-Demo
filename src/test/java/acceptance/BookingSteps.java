@@ -5,6 +5,7 @@ import com.wealcome.testbdd.domain.Customer;
 import com.wealcome.testbdd.domain.VTC;
 import com.wealcome.testbdd.domain.gateways.AuthenticationGateway;
 import com.wealcome.testbdd.domain.repositories.BookingRepository;
+import com.wealcome.testbdd.domain.repositories.CustomerAccountRepository;
 import com.wealcome.testbdd.domain.repositories.VTCRepository;
 import com.wealcome.testbdd.usecases.BookVTC;
 import cucumber.api.PendingException;
@@ -18,9 +19,10 @@ public class BookingSteps implements En {
 
     public BookingSteps(VTCRepository vtcRepository,
                         BookingRepository bookingRepository,
+                        CustomerAccountRepository customerAccountRepository,
                         AuthenticationGateway authenticationGateway) {
 
-        final BookVTC bookVTC = new BookVTC();
+        final BookVTC bookVTC = new BookVTC(customerAccountRepository, bookingRepository);
         BookingAttempt bookingAttempt = new BookingAttempt();
 
         When("^je tente de réserver le VTC \"([^\"]*)\" de \"([^\"]*)\" à \"([^\"]*)\"$",

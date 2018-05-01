@@ -1,6 +1,7 @@
 package com.wealcome.testbdd.domain;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 public class CustomerAccount {
 
@@ -10,16 +11,40 @@ public class CustomerAccount {
 
     public CustomerAccount(String customerId, BigDecimal balance, BigDecimal creditNote) {
         this.customerId = customerId;
-        this.balance = BigDecimal.valueOf(0);
-        this.creditNote = BigDecimal.valueOf(0);
+        this.balance = balance;
+        this.creditNote = creditNote;
     }
 
     public String getId() {
         return customerId;
     }
 
-    public void credit(BigDecimal balance, BigDecimal creditNote) {
-        this.balance = balance;
-        this.creditNote = creditNote;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CustomerAccount that = (CustomerAccount) o;
+        return Objects.equals(customerId, that.customerId) &&
+                Objects.equals(balance, that.balance) &&
+                Objects.equals(creditNote, that.creditNote);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(customerId, balance, creditNote);
+    }
+
+    @Override
+    public String toString() {
+        return "CustomerAccount{" +
+                "customerId='" + customerId + '\'' +
+                ", balance=" + balance +
+                ", creditNote=" + creditNote +
+                '}';
+    }
+
+    public void charge() {
+        balance = BigDecimal.valueOf(5);
     }
 }

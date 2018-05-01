@@ -7,4 +7,6 @@ import java.util.Set;
 public interface BookingRepository {
 
     Set<Booking> all();
+
+    void add(Booking booking);
 }
