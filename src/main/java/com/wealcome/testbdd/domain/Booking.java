@@ -7,14 +7,12 @@ public class Booking {
 
     private final Customer customer;
     private final VTC vtc;
-    private final String startPoint;
-    private final String destinationPoint;
+    private final Travel travel;
 
-    public Booking(Customer customer, VTC vtc, String startPoint, String destinationPoint) {
+    public Booking(Customer customer, VTC vtc, Travel travel) {
         this.customer = customer;
         this.vtc = vtc;
-        this.startPoint = startPoint;
-        this.destinationPoint = destinationPoint;
+        this.travel = travel;
     }
 
     @Override
@@ -24,14 +22,12 @@ public class Booking {
         Booking booking = (Booking) o;
         return Objects.equals(customer, booking.customer) &&
                 Objects.equals(vtc, booking.vtc) &&
-                Objects.equals(startPoint, booking.startPoint) &&
-                Objects.equals(destinationPoint, booking.destinationPoint);
+                Objects.equals(travel, booking.travel);
     }
 
     @Override
     public int hashCode() {
-
-        return Objects.hash(customer, vtc, startPoint, destinationPoint);
+        return Objects.hash(customer, vtc, travel);
     }
 
     @Override
@@ -39,8 +35,7 @@ public class Booking {
         return "Booking{" +
                 "customer=" + customer +
                 ", vtc=" + vtc +
-                ", startPoint='" + startPoint + '\'' +
-                ", destinationPoint='" + destinationPoint + '\'' +
+                ", travel='" + travel + '\'' +
                 '}';
     }
 }

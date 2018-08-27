@@ -44,7 +44,9 @@ public class CustomerAccount {
                 '}';
     }
 
-    public void charge() {
-        balance = BigDecimal.valueOf(5);
+    public void charge(ChargeStrategy chargeStrategy) {
+        Charge charge = chargeStrategy.charge(creditNote);
+        balance = balance.subtract(charge.getDebit());
+        creditNote = creditNote.subtract(charge.getConsumedCreditNote());
     }
 }

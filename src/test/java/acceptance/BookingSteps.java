@@ -2,6 +2,7 @@ package acceptance;
 
 import com.wealcome.testbdd.domain.Booking;
 import com.wealcome.testbdd.domain.Customer;
+import com.wealcome.testbdd.domain.Travel;
 import com.wealcome.testbdd.domain.VTC;
 import com.wealcome.testbdd.domain.gateways.AuthenticationGateway;
 import com.wealcome.testbdd.domain.repositories.BookingRepository;
@@ -22,13 +23,13 @@ public class BookingSteps implements En {
                         CustomerAccountRepository customerAccountRepository,
                         AuthenticationGateway authenticationGateway) {
 
-        final BookVTC bookVTC = new BookVTC(customerAccountRepository, bookingRepository);
+        final BookVTC bookVTC = new BookVTC(customerAccountRepository, bookingRepository, authenticationGateway);
         BookingAttempt bookingAttempt = new BookingAttempt();
 
         When("^je tente de réserver le VTC \"([^\"]*)\" de \"([^\"]*)\" à \"([^\"]*)\"$",
                 (String firstName, String startPoint, String destinationPoint) -> {
                     vtcRepository.all().stream().filter(vtc -> vtc.getFirstName().equals(firstName)).forEach(vtc -> {
-                        bookVTC.handle(vtc, startPoint, destinationPoint);
+                        bookVTC.handle(vtc, new Travel(startPoint, destinationPoint));
                         bookingAttempt.setCustomer(authenticationGateway.currentCustomer().get());
                         bookingAttempt.setVTC(vtc);
                         bookingAttempt.setStartPoint(startPoint);
@@ -40,7 +41,7 @@ public class BookingSteps implements En {
             Set<Booking> bookings = bookingRepository.all();
             assertEquals(1, bookings.size());
             assertEquals(new Booking(bookingAttempt.customer, bookingAttempt.vtc,
-                    bookingAttempt.startPoint, bookingAttempt.destinationPoint), bookings.iterator().next());
+                    new Travel(bookingAttempt.startPoint, bookingAttempt.destinationPoint)), bookings.iterator().next());
         });
 
         Then("^la réservation n'est pas effective$", () -> {
